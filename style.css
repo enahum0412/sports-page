@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  border: 25px solid #161616;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.question {
+  font-weight: 100;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #686666;
+  top: 300px;
+}
+
+.question:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 10px;
+  border-bottom: 1px solid #686666;
+}
+
+.gif-container {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gif-container #gif {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -10;
+  opacity: 0.5;
+  display: none;
+}
+
+.gif-container #points {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.gif-container #line-left {
+  position: absolute;
+  left: 0;
+}
+
+.gif-container #line-right {
+  position: absolute;
+  right: 0;
+}
+
+.word {
+  color: #fff;
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-transform: capitalize;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #35373b;
+  background: transparent;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 30px 0px;
+  width: 250px;
+  z-index: 10;
+  text-align: center;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.about-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+}
+
+.about-btn:hover span {
+  padding-right: 25px;
+}
+
+.about-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.projects-btn span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+}
+
+.projects-btn:hover span {
+  padding-left: 25px;
+}
+
+.projects-btn:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.btn:hover {
+  color: #c40303;
+  background: #000;
+  font-weight: bold;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.about-btn {
+  position: absolute;
+  left: 10px;
+}
+
+.projects-btn {
+  position: absolute;
+  right: 10px;
+}
+
+.about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  min-height: 100vh;
+  width: 50%;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(-1000px);
+  transition: transform 0.5s ease-in-out;
+}
+
+.about.show {
+  transform: translateX(0);
+}
+
+.projects, .projects.show {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  min-height: 100vh;
+  width: 50%;
+  padding: 20px;
+  line-height: 1.5;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(1000px);
+}
+
+.projects.show {
+  transform: translateX(0);
+}
+
+footer {
+  position: absolute;
+  bottom: 50px;
+}
+
+.social{
+  justify-content: left;
+  align-items: center;
+  display: inline-block;
+}
+
+.social-media {
+  padding: 10px;
+}
+
+.social img {
+  width: 15px;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  body{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gif-container #gif {
+    height: 100%;
+    width: 100%;
+  }
+
+  .about-btn {
+    top: 70px;
+    left: 80px;
+  }
+  
+  .projects-btn {
+    top: 70px;
+    right: 80px;
+    position: absolute;
+  }
+
+  .gif-container #line-left {
+    display: none;
+  }
+  
+  .gif-container #line-right {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 14px;
+    font-weight: bold;
+    top: 350px;
+  }
+
+  .word {
+    font-size: 46px;
+    font-weight: bolder;
+  }
+
+  .gif-container #gif {
+    height: 100vh;
+    width: 100vh;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 0px;
+    width: 100px;
+  }
+
+  .about-btn {
+    top: 70px;
+    left: 80px;
+  }
+
+  .about-btn span:after {
+    content: '';
+  }
+
+  .about-btn:hover span {
+    padding-right: 0;
+  }
+  
+  .projects-btn {
+    top: 70px;
+    right: 80px;
+    position: absolute;
+  }
+
+  .projects-btn span:after {
+    content: '';
+  }
+
+  .projects-btn:hover span {
+    padding-left: 0;
+  }
+
+  .about {
+    display: none;
+  }
+
+  .projects {
+    display: none;
+  }
+
+  .gif-container #line-left {
+    display: none;
+  }
+  
+  .gif-container #line-right {
+    display: none;
+  }
+}
