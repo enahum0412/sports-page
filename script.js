@@ -14,16 +14,16 @@ gifContainer.addEventListener("mousedown", () => {
   clearInterval(timer);
 });
 
-gifContainer.addEventListener("touchstart", () => {
-  gif.style.display = 'flex';
-  points.style.visibility = 'hidden';
-  clearInterval(timer);
-});
-
 gifContainer.addEventListener("mouseup", () => {
   gif.style.display = 'none';
   points.style.visibility = 'visible';
   timer = setInterval(random, 200);
+});
+
+gifContainer.addEventListener("touchstart", () => {
+  gif.style.display = 'flex';
+  points.style.visibility = 'hidden';
+  clearInterval(timer);
 });
 
 gifContainer.addEventListener("touchend", () => {
@@ -45,10 +45,8 @@ const random = () => {
   if (count === wordsArr.length) {
     clearInterval(timer);
     count = 0;
-
-    setTimeout(function() {
-      timer = setInterval(random, 200);
-    }, 20);
+    
+    timer = setInterval(random, 200);
   }
 };
 
