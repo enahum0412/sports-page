@@ -2,10 +2,10 @@ const gifContainer = document.querySelector('.gif-container');
 const gif = document.querySelector('.gif-container #gif');
 const points = document.querySelector('.gif-container #points');
 const word = document.querySelector('.word');
-const aboutBtn = document.getElementById('about-btn');
-const about = document.getElementById('about');
-const projectsBtn = document.getElementById('projects-btn');
-const projects = document.getElementById('projects');
+const aboutBtn = document.querySelector('#about-btn');
+const about = document.querySelector('#about');
+const projectsBtn = document.querySelector('#projects-btn');
+const projects = document.querySelector('#projects');
 
 // Show gif events
 gifContainer.addEventListener("mousedown", () => {

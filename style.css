@@ -59,16 +59,6 @@ body {
   position: absolute;
 }
 
-.gif-container #line-left {
-  position: absolute;
-  left: 0;
-}
-
-.gif-container #line-right {
-  position: absolute;
-  right: 0;
-}
-
 .word {
   color: #fff;
   font-size: 70px;
@@ -172,7 +162,7 @@ button {
   transform: translateX(0);
 }
 
-.projects, .projects.show {
+.projects {
   position: absolute;
   top: 0;
   right: 0;
@@ -233,14 +223,6 @@ footer {
     top: 70px;
     right: 80px;
     position: absolute;
-  }
-
-  .gif-container #line-left {
-    display: none;
-  }
-  
-  .gif-container #line-right {
-    display: none;
   }
 }
 
@@ -303,14 +285,6 @@ footer {
   }
 
   .projects {
-    display: none;
-  }
-
-  .gif-container #line-left {
-    display: none;
-  }
-  
-  .gif-container #line-right {
     display: none;
   }
 }
