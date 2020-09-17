@@ -35,7 +35,6 @@ body {
 }
 
 .gif-container {
-  height: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -45,12 +44,12 @@ body {
 
 .gif-container #gif {
   position: fixed;
-  top: 0%;
-  left: 0%;
   width: 100%;
-  z-index: -10;
+  height: 100%;
   opacity: 0.5;
-  display: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .gif-container #points {
@@ -209,11 +208,6 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .gif-container #gif {
-    height: 100%;
-    width: 100%;
-  }
-
   .about-btn {
     top: 70px;
     left: 80px;
@@ -236,11 +230,6 @@ footer {
   .word {
     font-size: 46px;
     font-weight: bolder;
-  }
-
-  .gif-container #gif {
-    height: 100vh;
-    width: 100vh;
   }
 
   .gif-container #points {

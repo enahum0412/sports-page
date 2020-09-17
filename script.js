@@ -9,25 +9,25 @@ const projects = document.querySelector('#projects');
 
 // Show gif events
 gifContainer.addEventListener("mousedown", () => {
-  gif.style.display = 'flex';
+  gif.style.backgroundImage = 'url("gif/' +  randomWord + '.gif")';
   points.style.visibility = 'hidden';
   clearInterval(timer);
 });
 
 gifContainer.addEventListener("mouseup", () => {
-  gif.style.display = 'none';
+  gif.style.backgroundImage = "";
   points.style.visibility = 'visible';
   timer = setInterval(random, 200);
 });
 
 gifContainer.addEventListener("touchstart", () => {
-  gif.style.display = 'flex';
+  gif.style.backgroundImage = 'url("gif/' +  randomWord + '.gif")';
   points.style.visibility = 'hidden';
   clearInterval(timer);
 });
 
 gifContainer.addEventListener("touchend", () => {
-  gif.style.display = 'none';
+  gif.style.backgroundImage = "";
   points.style.visibility = 'visible';
   timer = setInterval(random, 200);
 });
@@ -35,11 +35,11 @@ gifContainer.addEventListener("touchend", () => {
 // Show random words
 const wordsArr = ['soccer', 'basketball', 'hockey', 'volleyball', 'baseball', 'football'];
 let count = 0;
+let randomWord
 
 const random = () => {
-  let randomWord = wordsArr[count];
+  randomWord = wordsArr[count];
   word.innerHTML = randomWord;
-  gif.src = './gif/' + randomWord + '.gif';
   count ++;
   
   if (count === wordsArr.length) {
